@@ -1,0 +1,63 @@
+<!-- <alert type="success" [dismissOnTimeout]="2000" *ngIf="cadastrou">
+     O curso foi cadastrado com <strong>Sucesso!</strong>
+</alert> -->
+<!-- <alert type="success" [dismissOnTimeout]="2000" *ngIf="cadastrou">
+    O curso foi cadastrado com <strong>Sucesso!</strong>
+</alert> -->
+
+<div class="d-grid gap-2">
+    <button type="button" class="btn btn-outline-primary selecao" (click)="collapse.toggle()"[attr.aria-expanded]="!isCollapsed"
+	aria-controls="collapseExample" (click)="cleanForm(vcurso)">Cadastrar Curso <i class="bi bi-arrow-down"></i></button>
+
+    <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+        <div class="card">
+            <div class="card-body">
+                <p class="curso">Cadastro de Curso</p>
+                    <form method="post" (ngSubmit)="vcurso.form.valid && saveCurso(curso)" #vcurso="ngForm" novalidate> 
+                        <div class="form-group">  
+                            <div class="row">
+                                <div class="col">
+                                    <label for="nome_curso">Nome</label>                
+                                    <input type="text" id="nome_curso" name="nome_curso" 
+                                    placeholder=" " class="form-control" 
+                                    maxlength="100" required [(ngModel)]="curso.nome_curso"/>
+                                </div>
+                                <div class="col">
+                                    <label for="turno_curso" name="turno_curso">Turno</label>                
+                                    <select name="turno_curso" id="turno" class="form-select" required [(ngModel)]="curso.turno_curso">
+                                        <option value="Matutitno">Matutino</option>
+                                        <option value="Vespertino">Vespertino</option>
+                                        <option value="Noturno">Noturno</option>
+                                    </select>
+                                </div>
+                                </div> <br>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="versao_curso">Versão</label>                
+                                    <input type="number" id="versao_curso" name="versao_curso" placeholder="Ex: 2007" maxlength="4" class="form-control" required [(ngModel)]="curso.versao_curso"> <br>
+                                </div>
+                                <div class="col">    
+                                    <label for="conceito_mec">Conceito MEC</label>                
+                                    <select id="conceito_mec" name="conceito_mec" placeholder="Ex: 5" maxlength="1" class="form-select" required [(ngModel)]="curso.conceito_mec">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>    
+                                </div>    
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="nome_curso">Nome da Unidade de Ensino</label>                
+                                    <input type="text" id="nome_unidade" name="nome_unidade" placeholder="Ex: UFSM" class="form-control" required [(ngModel)]="curso.nome_unidade">
+                                </div>
+                            </div>
+                        </div><br>
+                        <button type="submit" class="btn btn-primary btn-lg cadastrar" (click)="collapse.toggle()"[attr.aria-expanded]="isCollapsed"
+                        aria-controls="collapseExample" [disabled]="!vcurso.valid">Cadastrar</button>
+                    </form>   
+            </div>
+        </div>
+    </div>
+</div>

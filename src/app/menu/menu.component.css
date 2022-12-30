@@ -1,0 +1,7 @@
+#corpo{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,78 @@
+.selecao{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    text-align: left;
+    border-radius: 0;
+    transition: .5s;
+    font-size: 1.5rem;
+}
+
+.selecao:hover{
+    background-color: #f2f2f2;
+    color: inherit;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+}
+
+.cabeca{
+    background-color: #0d6efd;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.cabecaesq{
+    border-top-left-radius: 5px;
+}
+.cabecadir{
+    border-top-right-radius: 5px;
+}
+
+.info{
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f2f2f2;
+    transition: .2s;
+}
+
+tr.info:hover{
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+div.botoes{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+div.editaDados{
+    padding: 1rem;
+}
+p.tituloEdita{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.salvar{
+    display: flex;
+    float: right;
+    gap: 5px;
+}
