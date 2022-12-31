@@ -33,6 +33,11 @@ p.curso{
 
 .cadastrar{
     float: right;
+    margin-top: 20px;
+}
+
+.col{
+    margin-top: 15px;
 }
 
 .selecao{
@@ -52,4 +57,20 @@ p.curso{
 
 .opcoes option{
     margin-top: 1rem;
+}
+
+@media(max-width: 768px){
+   .row{
+    flex-direction: column;
+   }
+   .col{
+    margin-top: 15px;
+   }
+   form{
+    display: flex;
+    flex-direction: column;
+   }
+   .cadastrar{
+    margin-top: 20px;
+   }
 }

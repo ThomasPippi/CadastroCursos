@@ -30,11 +30,11 @@
                                         <option value="Noturno">Noturno</option>
                                     </select>
                                 </div>
-                                </div> <br>
+                                </div>
                             <div class="row">
                                 <div class="col">
                                     <label for="versao_curso">Versão</label>                
-                                    <input type="number" id="versao_curso" name="versao_curso" placeholder="Ex: 2007" maxlength="4" class="form-control" required [(ngModel)]="curso.versao_curso"> <br>
+                                    <input type="number" id="versao_curso" name="versao_curso" placeholder="Ex: 2007" maxlength="4" class="form-control" required [(ngModel)]="curso.versao_curso">
                                 </div>
                                 <div class="col">    
                                     <label for="conceito_mec">Conceito MEC</label>                
@@ -53,7 +53,7 @@
                                     <input type="text" id="nome_unidade" name="nome_unidade" placeholder="Ex: UFSM" class="form-control" required [(ngModel)]="curso.nome_unidade">
                                 </div>
                             </div>
-                        </div><br>
+                        </div>
                         <button type="submit" class="btn btn-primary btn-lg cadastrar" (click)="collapse.toggle()"[attr.aria-expanded]="isCollapsed"
                         aria-controls="collapseExample" [disabled]="!vcurso.valid">Cadastrar</button>
                     </form>   
