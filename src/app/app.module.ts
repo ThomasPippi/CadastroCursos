@@ -1,4 +1,4 @@
-import { ErrorHandler, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { ErrorhandleService } from './services/errorhandle.service';
+
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -42,7 +42,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FontAwesomeModule
   ],
   exports: [ModalModule],
-  providers: [{provide: ErrorHandler, useClass: ErrorhandleService}],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
