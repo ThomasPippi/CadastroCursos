@@ -9,14 +9,13 @@
 .anima {
     -webkit-animation: fadeinout 4.8s linear forwards;
     animation: fadeinout 4.8s linear forwards;
+    opacity: 0;
 }
 
 @-webkit-keyframes fadeinout {
-  0%,100% { opacity: 0; }
   50% { opacity: 1; }
 }
 
 @keyframes fadeinout {
-  0%,100% { opacity: 0; }
   50% { opacity: 1; }
 }

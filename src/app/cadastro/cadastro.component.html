@@ -34,7 +34,9 @@
                             <div class="row">
                                 <div class="col">
                                     <label for="versao_curso">Versão</label>                
-                                    <input type="number" id="versao_curso" name="versao_curso" placeholder="Ex: 2007" maxlength="4" class="form-control" required [(ngModel)]="curso.versao_curso">
+                                    <input type="number" id="versao_curso" name="versao_curso" placeholder="Ex: 2007" maxlength="4" class="form-control" required [(ngModel)]="curso.versao_curso" 
+                                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                    maxlength = "4">
                                 </div>
                                 <div class="col">    
                                     <label for="conceito_mec">Conceito MEC</label>                

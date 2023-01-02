@@ -18,7 +18,7 @@ export class MenuComponent implements OnInit {
       mostrar => this.cadastrado = mostrar
     )
     this.cursoService.editou.subscribe(
-      mostrar => this.editado = mostrar
+      mostraredit => this.editado = mostraredit
     )
   }
 }
