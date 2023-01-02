@@ -54,4 +54,7 @@ export class ListarComponent {
       ariaLabelledBy: 'my-modal-title'
     });  
   }
+  countRow(){
+    return this.cursos.length;
+  }
 }

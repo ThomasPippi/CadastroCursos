@@ -7,7 +7,7 @@
 
 <div class="d-grid gap-2">
     <button type="button" class="btn btn-outline-primary selecao" (click)="collapse.toggle()"[attr.aria-expanded]="!isCollapsed"
-	aria-controls="collapseExample" (click)="cleanForm(vcurso)">Cadastrar Curso <i class="bi bi-arrow-down"></i></button>
+	aria-controls="collapseExample" (click)="cleanForm(vcurso)">Cadastrar Curso</button>
 
     <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
         <div class="card">

@@ -8,6 +8,9 @@ p.curso{
     float: right;
     margin-top: 20px;
 }
+label{
+    font-weight: 500;
+}
 
 .col{
     margin-top: 15px;

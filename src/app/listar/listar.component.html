@@ -8,7 +8,7 @@
             <div class="card-body">
                 <div *ngIf="cursos.length == 0">Não há cursos cadastrados.</div> <!-- CONDIÇÃO PARA MENSAGEM "SEM CURSOS CADASTRADOS" -->
                 <div *ngIf="cursos.length > 0" class="tabela"> <!-- ENTRA NA EDIÇÃO -->
-                    <table>
+                    <table id="tabela">
                         <thead>
                             <tr> <!-- TABELA DE CURSOS EXISTENTES -->
                               <th scope="col" class="cabeca cabecaesq">ID</th>
@@ -40,6 +40,7 @@
                             </tr>     
                           </tbody>
                     </table>
+                    <p class="numCursos"> Total de Cursos: {{ countRow() }}</p>
 
                     <!-- MODAL DA EDIÇÃO -->
 

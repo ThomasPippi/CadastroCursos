@@ -81,6 +81,12 @@ p.tituloEdita{
     display: none;
 }
 
+.numCursos{
+    color: gray;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
 
 @media(max-width: 768px){
    .h{
