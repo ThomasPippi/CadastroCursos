@@ -5,3 +5,18 @@
     gap: 50px;
     margin-bottom: 20px;
 }
+
+.anima {
+    -webkit-animation: fadeinout 4.8s linear forwards;
+    animation: fadeinout 4.8s linear forwards;
+}
+
+@-webkit-keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}

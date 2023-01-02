@@ -36,7 +36,11 @@ export class ListarComponent {
   }
 
   updateCurso(curso: Curso){
-    this.cursoService.updateCurso(this.curso).subscribe(curso => this.curso = curso)
+    this.cursoService.updateCurso(this.curso).subscribe(curso =>{
+      if(curso.cursoId != null ){
+        this.cursoService.editouSucesso();
+      }
+    }); 
   }
 
   editCurso(curso: Curso){

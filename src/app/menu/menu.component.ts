@@ -9,13 +9,16 @@ import { CursoService } from '../services/curso.service';
 })
 export class MenuComponent implements OnInit {
   cadastrado: boolean = false;
-
+  editado: boolean = false;
   constructor(private cursoService : CursoService){
     
   }
   ngOnInit() : void{
     this.cursoService.cadastrou.subscribe(
       mostrar => this.cadastrado = mostrar
+    )
+    this.cursoService.editou.subscribe(
+      mostrar => this.editado = mostrar
     )
   }
 }

@@ -12,6 +12,7 @@ export class CursoService {
   
   url = 'https://localhost:7134/cursos';
   cadastrou = new EventEmitter<boolean>()
+  editou = new EventEmitter<boolean>()
 
   //injetando httpClient
   constructor(private httpClient: HttpClient){}
@@ -64,4 +65,7 @@ export class CursoService {
     this.cadastrou.emit(true)
   }
 
+  editouSucesso(){
+    this.editou.emit(true)
+  }
 }
