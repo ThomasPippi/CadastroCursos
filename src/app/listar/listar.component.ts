@@ -20,6 +20,7 @@ export class ListarComponent {
   cursos: Curso[] = [];
   modalRef?: BsModalRef;
   @ViewChild('templateConfirm') templateConfirm: any;
+  count: any = 0;
 
   constructor(
     private cursoService: CursoService,

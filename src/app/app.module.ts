@@ -15,6 +15,7 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ErrorhandleService } from './services/errorhandle.service';
 import { AlertModule } from 'ngx-bootstrap/alert';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -37,7 +38,8 @@ import { AlertModule } from 'ngx-bootstrap/alert';
     FormsModule,
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    FontAwesomeModule
   ],
   exports: [ModalModule],
   providers: [{provide: ErrorHandler, useClass: ErrorhandleService}],

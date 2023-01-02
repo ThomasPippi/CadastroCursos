@@ -3,33 +3,6 @@ p.curso{
     font-weight: bold;
     color: #0d6efd;
 }
-.cadastroCursos{
-    display: flex;
-    flex-direction: column;   
-    gap: 10px;
-}
-
-.cadastroLabel{
-    font-weight: bold;
-    margin: 10px;
-}
-.cadastroInput{
-    margin-top: 5px;
-    padding: .6rem;
-    border: 2px solid #f2f2f2;
-    border-radius: 5px;
-    width: 68%;
-    font-size: 1rem;
-}
-
-.cadastroInputPeq{
-    margin-top: 5px;
-    padding: .6rem;
-    border: 2px solid #f2f2f2;
-    border-radius: 5px;
-    width: 20%;
-    font-size: 1rem;
-}
 
 .cadastrar{
     float: right;
@@ -73,4 +46,7 @@ p.curso{
    .cadastrar{
     margin-top: 20px;
    }
+   .selecao, .selecao:hover{
+    width: 95%;
+}
 }

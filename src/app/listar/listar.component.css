@@ -19,7 +19,7 @@ table{
 
 thead {
     display: table-header-group;
-    vertical-align: middle;
+    vertical-align: middle; 
     border-color: inherit;
 }
 
@@ -36,10 +36,10 @@ tr {
     font-weight: 400;
 }
 .cabecaesq{
-    border-top-left-radius: 5px;
+    border-top-left-radius: 10px;
 }
 .cabecadir{
-    border-top-right-radius: 5px;
+    border-top-right-radius: 10px;
 }
 
 .info{
@@ -75,4 +75,27 @@ p.tituloEdita{
     display: flex;
     float: right;
     gap: 5px;
+}
+
+.icone{
+    display: none;
+}
+
+
+@media(max-width: 768px){
+   .h{
+    display: none;
+   }
+   .cabeca{
+    font-size: 1rem;
+   }
+   .info{
+    font-size: .9rem;
+   }
+   .icone{
+    display: block;
+   }
+   .texto{
+    display: none;
+   }
 }

@@ -1,3 +1,4 @@
+<script src="https://kit.fontawesome.com/cdfedfc4b0.js" crossorigin="anonymous"></script>
 <div class="d-grid gap-2">
     <button type="button" class="btn btn-outline-primary selecao" (click)="collapse.toggle()"[attr.aria-expanded]="!isCollapsed"
 	aria-controls="collapseExample" (click)="getCursos()">Cursos</button> <!-- BOTÃO EXIBE/ESCONDE A EDIÇÃO DOS CURSOS -->
@@ -6,34 +7,35 @@
         <div class="card">
             <div class="card-body">
                 <div *ngIf="cursos.length == 0">Não há cursos cadastrados.</div> <!-- CONDIÇÃO PARA MENSAGEM "SEM CURSOS CADASTRADOS" -->
-                <div *ngIf="cursos.length > 0"> <!-- ENTRA NA EDIÇÃO -->
+                <div *ngIf="cursos.length > 0" class="tabela"> <!-- ENTRA NA EDIÇÃO -->
                     <table>
                         <thead>
                             <tr> <!-- TABELA DE CURSOS EXISTENTES -->
                               <th scope="col" class="cabeca cabecaesq">ID</th>
                               <th scope="col" class="cabeca">Curso</th>
-                              <th scope="col" class="cabeca">Turno</th>
-                              <th scope="col" class="cabeca">Versão</th>
-                              <th scope="col" class="cabeca">Conceito MEC</th>
-                              <th scope="col" class="cabeca">Universidade</th>
+                              <th scope="col" class="cabeca h">Turno</th>
+                              <th scope="col" class="cabeca h">Versão</th>
+                              <th scope="col" class="cabeca h">Conceito MEC</th>
+                              <th scope="col" class="cabeca h">Universidade</th>
                               <th scope="col" class="cabeca cabecadir">Ação</th>
                             </tr>
                           </thead>
-                          <tbody>
+                          <tbody> 
                             <tr *ngFor="let curso of cursos" class="info">
                               <th scope="row" class="info">{{ curso.cursoId }}</th>
                               <td class="info">{{ curso.nome_curso }}</td>
-                              <td class="info">{{ curso.turno_curso }}</td>
-                              <td class="info">{{ curso.versao_curso }}</td>
-                              <td class="info">{{ curso.conceito_mec }}</td>
-                              <td class="info">{{ curso.nome_unidade }}</td>
+                              <td class="info h">{{ curso.turno_curso }}</td>
+                              <td class="info h">{{ curso.versao_curso }}</td>
+                              <td class="info h">{{ curso.conceito_mec }}</td>
+                              <td class="info h">{{ curso.nome_unidade }}</td>
                               <td class="info"><div class="botoes"> <!-- BOTÕES EDITAR / REMOVER -->
                                 <button class="btn btn btn-warning" ngbTooltip="Editar Dados"
                                 (click)="openModal(editar)" 
                                 (click)="editCurso(curso)"
                                 (click)="collapse.toggle()"[attr.aria-expanded]="isCollapsed"
-	                              aria-controls="collapseExample">Editar</button>
-                                <button class="btn btn-danger" (click)="deleteCurso(curso)" ngbTooltip="Excluir Curso">Excluir</button></div>
+	                              aria-controls="collapseExample"><span class="icone">&#9998;</span><span class="texto">Editar</span></button>
+                                <button class="btn btn-danger" 
+                                (click)="deleteCurso(curso)" ngbTooltip="Excluir Curso"><span class="icone">&#88;</span><span class="texto">Excluir</span></button></div>
                               </td>  
                             </tr>     
                           </tbody>
@@ -110,13 +112,7 @@
                             [disabled]="!vcurso.valid"
                             (click)="modalRef?.hide()">Salvar</button>
                             <button type="submit" class="btn btn-warning btn-lg" (click)="collapse.toggle()"[attr.aria-expanded]="subCollapsed"
-                            aria-controls="collapseExample" (click)="modalRef?.hide()">Cancelar</button>
- 
-                  
-                                
-                            
-                                
-                                                       
+                            aria-controls="collapseExample" (click)="modalRef?.hide()">Cancelar</button>                   
                           </div>  
                         </form>
                       </div>
